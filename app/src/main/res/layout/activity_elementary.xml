@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context="id.our.pintarplus.ElementaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/lg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Subject that You like..!"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:text="Elementary's"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_grade"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/mtk"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/lingkaran_grade"/>
+
+            <ImageView
+                android:id="@+id/icon_mtk"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calculating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mtk" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Matematika"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="normal"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/eng"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/lingkaran_grade"/>
+
+            <ImageView
+                android:id="@+id/icon_eng"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/eng"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eng" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="Bahasa \nInggris"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/pkn"
+                    android:layout_width="77dp"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/lingkaran_grade"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_pkn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/eagle"
+                    app:layout_constraintBottom_toBottomOf="@+id/pkn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pkn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:text="PKN"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/ipa"
+                    android:layout_width="77dp"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/lingkaran_grade"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_ipa"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rafflesia"
+                    app:layout_constraintBottom_toBottomOf="@+id/ipa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ipa" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="IPA"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/b_ind"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/lingkaran_grade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_b_ind"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/book_2"
+                app:layout_constraintBottom_toBottomOf="@+id/b_ind"
+                app:layout_constraintEnd_toEndOf="@+id/b_ind"
+                app:layout_constraintHorizontal_bias="0.657"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/b_ind"
+                app:layout_constraintVertical_bias="0.407" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="Bahasa \nIndonesia"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="normal"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/ips"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/lingkaran_grade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_ips"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ips"
+                app:layout_constraintBottom_toBottomOf="@+id/ips"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ips" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="IPS"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="normal"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="font_1">#4D4A4A</color>
+    <color name="font_2">#565656</color>
+    <color name="font_3">#808080</color>
+    <color name="mint">#80BDB3</color>
+    <color name="button">#d8d7d9</color>
+    <color name="transparent">#00FF0000</color>
+    <color name="shadow">#404e4a</color>
+    <color name="notification">#adbab8</color>">
 </resources>
