@@ -13,6 +13,12 @@
         android:theme="@style/Theme.PintarPlus"
         tools:targetApi="31">
         <activity
+            android:name=".SecondaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstScreenPintarPlus"
+            android:exported="false" />
+        <activity
             android:name=".TestActivity"
             android:exported="false" />
         <activity
