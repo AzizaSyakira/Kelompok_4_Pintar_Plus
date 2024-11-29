@@ -13,7 +13,11 @@
         android:theme="@style/Theme.PintarPlus"
         tools:targetApi="31">
         <activity
+<<<<<<< Updated upstream
             android:name=".PrimaryActivity"
+=======
+            android:name=".MatpelActivity"
+>>>>>>> Stashed changes
             android:exported="false" />
         <activity
             android:name=".SecondaryActivity"
