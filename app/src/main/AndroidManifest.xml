@@ -14,15 +14,22 @@
         android:theme="@style/Theme.PintarPlus"
         tools:targetApi="31">
 
+        <!-- PrimaryActivity -->
         <activity
             android:name=".PrimaryActivity"
             android:exported="false" />
+
+        <!-- MatpelActivity -->
         <activity
             android:name=".MatpelActivity"
             android:exported="false" />
+
+        <!-- SecondaryActivity -->
         <activity
             android:name=".SecondaryActivity"
             android:exported="false" />
+
+        <!-- FirstScreenPintarPlus: Halaman pertama aplikasi -->
         <activity
             android:name=".FirstScreenPintarPlus"
             android:exported="true">
@@ -31,13 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 </manifest>

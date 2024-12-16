@@ -4,33 +4,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class FirstScreenPintarPlus extends AppCompatActivity {
+
     TextView Tv_ke_Login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_first_screen_pintar_plus);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Menghubungkan TextView dengan ID di XML
+        Tv_ke_Login = findViewById(R.id.Tv_ke_Login);
+
+        // Menambahkan event listener untuk navigasi
+        Tv_ke_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(FirstScreenPintarPlus.this, "Navigating to Login Page", Toast.LENGTH_SHORT).show();
+                // Intent untuk membuka LoginActivity
+                Intent intent = new Intent(FirstScreenPintarPlus.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
-
-        // Menambahkan listener onClick untuk TextView
-        findViewById(R.id.Tv_ke_Login).setOnClickListener(view -> navigateToLogin());
-    }
-
-    public void navigateToLogin() {
-        Intent intent = new Intent(FirstScreenPintarPlus.this, LoginActivity.class);
-        startActivity(intent);
     }
 }
+
+
