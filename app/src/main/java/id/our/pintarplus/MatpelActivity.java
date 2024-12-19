@@ -1,5 +1,6 @@
 package id.our.pintarplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -20,5 +21,11 @@ public class MatpelActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        private int getGradeIdFromIntent() {
+            Intent intent = getIntent();
+            return intent.getIntExtra("grade_id", 0);
+        }
+
     }
 }
