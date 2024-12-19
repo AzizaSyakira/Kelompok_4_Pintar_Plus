@@ -10,11 +10,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitConfig {
 
-    // http://192.168.76.3:8000/api/
     // http://10.0.2.2:80/api/ --> emulator api memu
-    // http://127.0.0.1:8000/api/
-    // http://192.168.187.65:8000/api/
-    private static final String BASE_URL = "http://10.0.2.2:80/API/api_pintarPlus.php?action="; // Sesuaikan BASE_URL
+    // http://192.168.238.162:80/api/ -->WIFI UNIQUE api memu
+    // http://172.31.96.1:80/api/ -->WIFI HP api memu
+
+    private static final String BASE_URL = "http://172.31.96.1:80/API/"; // Sesuaikan BASE_URL
 
     public Retrofit getRetrofitClientInstance() {
 

@@ -9,21 +9,11 @@ import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 
-public class ApiInterface {
-    @GET("getGrade")
-    public Call<List<GradeModel>> getGrade(
+public interface ApiInterface {
+    @GET("api_pintarPlus.php?action=getGrade")
+    Call<List<GradeModel>> getGrade();
 
-    )
-    {
-        return null;
-    }
-
-    @GET("getMatpel")
-    public Call<List<MatpelModel>> getMatpel(
-
-    )
-    {
-        return null;
-    }
-
+    @GET("api_pintarPlus.php?action=getMatpel")
+    Call<List<MatpelModel>> getMatpel();
 }
+

@@ -3,6 +3,7 @@ package id.our.pintarplus;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -78,17 +81,18 @@ public class GradeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<GradeModel>> call, Throwable t) {
+                Log.e("error", t.getMessage().toString());
                 Toast.makeText(GradeActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void loadImage(String imageUrl, ImageView imageView) {
-//        Glide.with(this)
-//                .load(imageUrl)
+        Glide.with(this)
+                .load(imageUrl)
 //                .placeholder(R.drawable.placeholder_image) // Optional placeholder image
 //                .error(R.drawable.error_image) // Optional error image
-//                .into(imageView);
+                .into(imageView);
     }
 
     private void openMatpelActivity(int gradeId) {
