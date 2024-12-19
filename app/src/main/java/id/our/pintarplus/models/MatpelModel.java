@@ -1,7 +1,7 @@
 package id.our.pintarplus.models;
 
-public class GradeModel {
+public class MatpelModel {
     public int id;
-    public String grade;
+    public String matpel;
     public String icon;
 }

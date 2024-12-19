@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MatpelActivity extends AppCompatActivity {
-
+    public int gradeId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +22,9 @@ public class MatpelActivity extends AppCompatActivity {
             return insets;
         });
 
-        private int getGradeIdFromIntent() {
-            Intent intent = getIntent();
-            return intent.getIntExtra("grade_id", 0);
-        }
+
+        Intent intent = getIntent();
+        gradeId =  intent.getIntExtra("grade_id", 0);
 
     }
 }

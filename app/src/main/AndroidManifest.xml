@@ -15,6 +15,32 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".ElementaryActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".FirstScreenPintarPlus"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GradeActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
 
@@ -33,5 +59,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
     </application>
 </manifest>

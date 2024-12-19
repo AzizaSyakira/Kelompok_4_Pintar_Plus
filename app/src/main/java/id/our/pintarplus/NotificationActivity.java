@@ -39,7 +39,7 @@ public class NotificationActivity extends AppCompatActivity {
                 rbUnread.setTextColor(getResources().getColor(android.R.color.black));
             }
         });
-        return 0;
+
     }
 }
 
