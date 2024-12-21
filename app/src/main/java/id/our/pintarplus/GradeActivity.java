@@ -55,9 +55,9 @@ public class GradeActivity extends AppCompatActivity {
         loadGradeData();
 
         // Set click listeners
-        icon_1.setOnClickListener(v -> openMatpelActivity(1));
-        icon_2.setOnClickListener(v -> openMatpelActivity(2));
-        icon_3.setOnClickListener(v -> openMatpelActivity(3));
+        icon_1.setOnClickListener(v -> openGradeActivity(1));
+        icon_2.setOnClickListener(v -> openGradeActivity(2));
+        icon_3.setOnClickListener(v -> openGradeActivity(3));
     }
 
     private void loadGradeData() {
@@ -95,9 +95,23 @@ public class GradeActivity extends AppCompatActivity {
                 .into(imageView);
     }
 
-    private void openMatpelActivity(int gradeId) {
-        Intent intent = new Intent(GradeActivity.this, MatpelActivity.class);
+    private void openGradeActivity(int gradeId) {
+        Intent intent;
+
+        // Memilih activity berdasarkan gradeId
+        if (gradeId == 1) {
+            intent = new Intent(GradeActivity.this, ElementaryActivity.class);
+        } else if (gradeId == 2) {
+            intent = new Intent(GradeActivity.this, PrimaryActivity.class);
+        } else if (gradeId == 3) {
+            intent = new Intent(GradeActivity.this, SecondaryActivity.class);
+        } else {
+            // Jika gradeId tidak cocok, gunakan activity default atau tampilkan pesan error
+            intent = new Intent(GradeActivity.this, MainActivity.class);
+        }
+
         intent.putExtra("grade_id", gradeId);
         startActivity(intent);
     }
+
 }

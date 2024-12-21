@@ -25,7 +25,7 @@ public class FirstScreenPintarPlus extends AppCompatActivity {
             Toast.makeText(FirstScreenPintarPlus.this, "Welcome To Pintar Plus", Toast.LENGTH_SHORT).show();
             try {
                 // Intent untuk menuju LoginActivity
-                Intent intent = new Intent(FirstScreenPintarPlus.this, GradeActivity.class);
+                Intent intent = new Intent(FirstScreenPintarPlus.this, LoginActivity.class);
                 startActivity(intent);
             } catch (Exception e) {
                 // Tangani error jika LoginActivity tidak ditemukan

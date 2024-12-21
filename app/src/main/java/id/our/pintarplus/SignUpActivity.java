@@ -1,6 +1,8 @@
 package id.our.pintarplus;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,6 +22,16 @@ public class SignUpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        findViewById(R.id.btnSignUp).setOnClickListener(v -> {
+            Toast.makeText(this, " Sign Up Berhasil!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(SignUpActivity.this, GradeActivity.class);
+            startActivity(intent);
+        });
 
+        findViewById(R.id.LoginSignUp).setOnClickListener(v -> {
+            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
     }
 }

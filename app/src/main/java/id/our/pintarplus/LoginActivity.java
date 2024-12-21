@@ -2,7 +2,9 @@ package id.our.pintarplus;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -11,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
     private TextView sign_up;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +27,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         // Button to navigate to Sign Up page
-        findViewById(R.id.sign_up).setOnClickListener(v -> {
+        findViewById(R.id.btnLogin).setOnClickListener(v -> {
             // Create intent to navigate to SignUpActivity
+            Intent intent = new Intent(LoginActivity.this, GradeActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btndaftar).setOnClickListener(v -> {
+            Toast.makeText(this, "tombol daftar clicked!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivity(intent);
         });
