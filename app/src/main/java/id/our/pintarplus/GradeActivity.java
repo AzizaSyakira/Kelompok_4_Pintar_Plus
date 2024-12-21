@@ -1,6 +1,7 @@
 package id.our.pintarplus;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,7 +69,7 @@ public class GradeActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     List<GradeModel> grades = response.body();
 
-                    // Display grades
+                    // Tampilkan gambar dari data API
                     if (grades.size() >= 3) {
                         loadImage(grades.get(0).icon, icon_1);
                         loadImage(grades.get(1).icon, icon_2);
@@ -87,13 +88,36 @@ public class GradeActivity extends AppCompatActivity {
         });
     }
 
-    private void loadImage(String imageUrl, ImageView imageView) {
-        Glide.with(this)
-                .load(imageUrl)
-//                .placeholder(R.drawable.placeholder_image) // Optional placeholder image
-//                .error(R.drawable.error_image) // Optional error image
-                .into(imageView);
+
+    private void loadImage(String imageData, ImageView imageView) {
+        if (imageData.contains("/")) { // Deteksi jika data adalah Base64
+            try {
+                // Dekode string Base64 menjadi byte array
+                byte[] decodedBytes = android.util.Base64.decode(imageData, android.util.Base64.DEFAULT);
+
+                // Konversi byte array menjadi Bitmap
+                Bitmap bitmap = android.graphics.BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+
+                if (bitmap != null) {
+                    // Tampilkan gambar di ImageView
+                    imageView.setImageBitmap(bitmap);
+                } else {
+                    // Jika decoding gagal, tampilkan placeholder
+                    imageView.setImageResource(R.drawable.error);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                imageView.setImageResource(R.drawable.error); // Placeholder jika data tidak valid
+            }
+        } else {
+            Glide.with(imageView.getContext())
+                    .load(imageData)
+                    .placeholder(R.drawable.image)
+                    .error(R.drawable.error)
+                    .into(imageView);
+        }
     }
+
 
     private void openGradeActivity(int gradeId) {
         Intent intent;
