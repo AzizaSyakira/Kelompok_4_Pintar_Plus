@@ -87,7 +87,7 @@
                     android:drawablePadding="@dimen/lg"
                     android:ems="10"
                     android:padding="@dimen/xlg"
-                    android:text="Number / Email"
+                    android:hint="Number / Email"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 
@@ -101,7 +101,7 @@
                     android:drawablePadding="@dimen/lg"
                     android:ems="10"
                     android:padding="@dimen/xlg"
-                    android:text="Password"
+                    android:hint="Password"
                     android:textColor="@color/black"
                     android:textSize="13sp"
                     app:cardCornerRadius="10dp" />
