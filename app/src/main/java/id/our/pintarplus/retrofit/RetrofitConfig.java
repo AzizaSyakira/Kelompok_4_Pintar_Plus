@@ -13,8 +13,9 @@ public class RetrofitConfig {
     // http://10.0.2.2:80/api/ --> emulator api memu
     // http://192.168.238.162:80/api/ -->WIFI UNIQUE api memu
     // http://172.31.96.1:80/api/ -->WIFI HP api memu
+    // http://192.168.192.162/api/ -->WIFI HP 2 api memu
 
-    private static final String BASE_URL = "http://172.31.96.1:80/API/"; // Sesuaikan BASE_URL
+    private static final String BASE_URL = "http://192.168.192.162:80/API/"; // Sesuaikan BASE_URL
 
     public Retrofit getRetrofitClientInstance() {
 
