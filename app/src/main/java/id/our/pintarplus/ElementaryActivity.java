@@ -1,8 +1,10 @@
 package id.our.pintarplus;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -22,8 +24,8 @@ import retrofit2.Retrofit;
 
 public class ElementaryActivity extends AppCompatActivity {
 
-    private ImageView matpel_icon_1, matpel_icon_2, matpel_icon_3, matpel_icon_4, matpel_icon_5, matpel_icon_6;
-    private ApiInterface apiInterface;
+    public ImageView matpel_icon_1, matpel_icon_2, matpel_icon_3, matpel_icon_4, matpel_icon_5, matpel_icon_6;
+    public ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,14 @@ public class ElementaryActivity extends AppCompatActivity {
                         loadImage(matpelList.get(3).icon, matpel_icon_4);
                         loadImage(matpelList.get(4).icon, matpel_icon_5);
                         loadImage(matpelList.get(5).icon, matpel_icon_6);
+
+                        // Set OnClickListeners for icons
+                        matpel_icon_1.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(0).getId()));
+                        matpel_icon_2.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(1).getId()));
+                        matpel_icon_3.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(2).getId()));
+                        matpel_icon_4.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(3).getId()));
+                        matpel_icon_5.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(4).getId()));
+                        matpel_icon_6.setOnClickListener(v -> openVideoMatpelActivity(matpelList.get(5).getId()));
                     } else {
                         Toast.makeText(ElementaryActivity.this, "Insufficient data from API", Toast.LENGTH_SHORT).show();
                     }
@@ -105,5 +115,12 @@ public class ElementaryActivity extends AppCompatActivity {
                     .error(R.drawable.error)
                     .into(imageView);
         }
-    }   
+    }
+
+    private void openVideoMatpelActivity(String matpelId) {
+        // Membuat Intent untuk membuka VideoMatpelActivity dan mengirimkan matpel_id
+        Intent intent = new Intent(ElementaryActivity.this, VideoMatpelActivity.class);
+        intent.putExtra("matpel_id", matpelId);
+        startActivity(intent);
+    }
 }
