@@ -17,6 +17,9 @@
         android:theme="@style/Theme.PintarPlus"
         tools:targetApi="31">
         <activity
+            android:name=".VideoPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".VideoMatpelActivity"
             android:exported="false" />
         <activity

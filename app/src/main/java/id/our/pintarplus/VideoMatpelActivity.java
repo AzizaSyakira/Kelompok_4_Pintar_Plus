@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -20,7 +21,7 @@ import retrofit2.Retrofit;
 
 public class VideoMatpelActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recycler_videos;
     private VideoAdapter videoAdapter;
     private ApiInterface apiInterface;
 
@@ -29,15 +30,15 @@ public class VideoMatpelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_matpel);
 
-        // Initialize Retrofit
+        recycler_videos = findViewById(R.id.recycler_videos);
+        recycler_videos.setLayoutManager(new LinearLayoutManager(this));
+
         Retrofit retrofit = new RetrofitConfig().getRetrofitClientInstance();
         apiInterface = retrofit.create(ApiInterface.class);
 
-        // Get matpel_id from Intent
         String matpelId = getIntent().getStringExtra("matpel_id");
 
         if (matpelId != null) {
-            // Load videos for the given matpel_id
             loadVideos(matpelId);
         } else {
             Toast.makeText(this, "Matpel ID not found", Toast.LENGTH_SHORT).show();
@@ -45,24 +46,22 @@ public class VideoMatpelActivity extends AppCompatActivity {
     }
 
     private void loadVideos(String matpelId) {
-        // Memanggil API untuk mendapatkan video
         Call<List<VideoModel>> call = apiInterface.getVideosByMatpel(matpelId);
         call.enqueue(new Callback<List<VideoModel>>() {
             @Override
             public void onResponse(Call<List<VideoModel>> call, Response<List<VideoModel>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<VideoModel> videos = response.body();
-                    videoAdapter = new VideoAdapter(videos);
-                    recyclerView.setAdapter(videoAdapter);
+                    videoAdapter = new VideoAdapter(VideoMatpelActivity.this, videos);
+                    recycler_videos.setAdapter(videoAdapter);
                 } else {
-                    Log.e("API_ERROR", "Failed to load videos. Response: " + response.toString());
                     Toast.makeText(VideoMatpelActivity.this, "Failed to load videos", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<VideoModel>> call, Throwable t) {
-                Log.e("API_ERROR", "Failure: " + t.getMessage());
+                Log.e("API_ERROR", "Error: " + t.getMessage());
                 Toast.makeText(VideoMatpelActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
