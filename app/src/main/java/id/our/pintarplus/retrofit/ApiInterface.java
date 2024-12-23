@@ -20,8 +20,9 @@ public interface ApiInterface {
     @GET("api_pintarPlus.php?action=getMatpel")
     Call<List<MatpelModel>> getMatpel();
 
-    @GET("videos/{matpelId}")  // Pastikan URL ini sesuai dengan API yang Anda gunakan
-    Call<List<VideoModel>> getVideosByMatpel(@Path("matpelId") String matpelId);
+    @GET("api_pintarPlus.php?action=getCourse")
+    Call<List<VideoModel>> getVideosByMatpel(@Query("matpelId") String matpelId);
+
 }
 
 

@@ -1,7 +1,9 @@
 package id.our.pintarplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +26,7 @@ public class VideoMatpelActivity extends AppCompatActivity {
     private RecyclerView recycler_videos;
     private VideoAdapter videoAdapter;
     private ApiInterface apiInterface;
+    private ImageView back_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,13 @@ public class VideoMatpelActivity extends AppCompatActivity {
 
         recycler_videos = findViewById(R.id.recycler_videos);
         recycler_videos.setLayoutManager(new LinearLayoutManager(this));
+
+        back_button = findViewById(R.id.back_button);
+
+        back_button.setOnClickListener(view -> {
+            Intent intent = new Intent(VideoMatpelActivity.this, ElementaryActivity.class);
+            startActivity(intent);
+        });
 
         Retrofit retrofit = new RetrofitConfig().getRetrofitClientInstance();
         apiInterface = retrofit.create(ApiInterface.class);
