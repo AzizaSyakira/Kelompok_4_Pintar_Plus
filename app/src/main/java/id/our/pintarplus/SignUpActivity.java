@@ -23,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
             return insets;
         });
         findViewById(R.id.btnSignUp).setOnClickListener(v -> {
-            Toast.makeText(this, " Sign Up Berhasil!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " Buat Akun Berhasil!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SignUpActivity.this, GradeActivity.class);
             startActivity(intent);
         });

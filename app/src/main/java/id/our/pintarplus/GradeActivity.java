@@ -137,5 +137,4 @@ public class GradeActivity extends AppCompatActivity {
         intent.putExtra("grade_id", gradeId);
         startActivity(intent);
     }
-
 }

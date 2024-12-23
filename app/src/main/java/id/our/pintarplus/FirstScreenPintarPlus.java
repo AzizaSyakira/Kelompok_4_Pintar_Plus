@@ -32,7 +32,9 @@ public class FirstScreenPintarPlus extends AppCompatActivity {
                 Toast.makeText(FirstScreenPintarPlus.this, "Error: Unable to navigate to LoginActivity", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
+            finish();
         });
 
     }
 }
+

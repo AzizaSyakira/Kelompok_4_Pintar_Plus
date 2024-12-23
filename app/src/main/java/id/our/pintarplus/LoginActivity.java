@@ -28,13 +28,13 @@ public class LoginActivity extends AppCompatActivity {
 
         // Button to navigate to Sign Up page
         findViewById(R.id.btnLogin).setOnClickListener(v -> {
-            // Create intent to navigate to SignUpActivity
+            Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, GradeActivity.class);
             startActivity(intent);
         });
 
         findViewById(R.id.btndaftar).setOnClickListener(v -> {
-            Toast.makeText(this, "tombol daftar clicked!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Buat Akun!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivity(intent);
         });
