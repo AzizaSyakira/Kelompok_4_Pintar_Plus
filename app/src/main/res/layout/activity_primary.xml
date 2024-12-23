@@ -76,6 +76,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/calculating"
                         app:layout_constraintTop_toTopOf="@+id/mtk" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -110,6 +111,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.498"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/fisika"
                         app:layout_constraintTop_toTopOf="@+id/fisika" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -150,6 +152,7 @@
                         app:layout_constraintBottom_toBottomOf="@+id/eng"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/eng"
                         app:layout_constraintTop_toTopOf="@+id/eng" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,6 +188,7 @@
                         app:layout_constraintBottom_toBottomOf="@+id/biologi"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/rafflesia"
                         app:layout_constraintTop_toTopOf="@+id/biologi" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -227,6 +231,7 @@
                         app:layout_constraintHorizontal_bias="0.657"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/b_ind"
+                        android:src="@drawable/book"
                         app:layout_constraintVertical_bias="0.407" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -260,6 +265,7 @@
                         app:layout_constraintBottom_toBottomOf="@+id/kimia"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/kimia"
                         app:layout_constraintTop_toTopOf="@+id/kimia" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -307,6 +313,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/pkn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/eagle"
                     app:layout_constraintTop_toTopOf="@+id/pkn" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -72,6 +72,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
+                android:src="@drawable/calculating"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/mtk" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -104,6 +105,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
+                android:src="@drawable/eng"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/eng" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -143,6 +145,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/pkn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/eagle"
                     app:layout_constraintTop_toTopOf="@+id/pkn" />
             </androidx.constraintlayout.widget.ConstraintLayout>
                 <TextView
@@ -174,6 +177,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/ipa"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/rafflesia"
                     app:layout_constraintTop_toTopOf="@+id/ipa" />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
@@ -213,6 +217,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/b_ind"
                 app:layout_constraintHorizontal_bias="0.657"
                 app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/book"
                 app:layout_constraintTop_toTopOf="@+id/b_ind"
                 app:layout_constraintVertical_bias="0.407" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -245,6 +250,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/ips"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ips"
                 app:layout_constraintTop_toTopOf="@+id/ips" />
         </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
